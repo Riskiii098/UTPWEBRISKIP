@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda - Portofolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .hero-section {
+      background-image: url('wallpapersden.com_77222-1920x1080.jpg'); /* Ganti path jika perlu */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Lapisan transparan */
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body class="text-white flex flex-col min-h-screen m-0">
+
+  <header class="bg-gray-300 shadow-md sticky top-0 z-50 w-full text-gray-800">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Portofolio</h1>
+      <nav class="space-x-4 hidden md:block">
+        <a href="index.html" class="text-blue-500">Beranda</a>
+        <a href="tentang.html" class="hover:text-blue-500">Tentang</a>
+        <a href="projek.html" class="hover:text-blue-500">Projek</a>
+        <a href="keahlian.html" class="hover:text-blue-500">Keahlian</a>
+        <a href="kontak.html" class="hover:text-blue-500">Kontak</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="hero-section flex-grow flex flex-col justify-center items-center text-center px-4">
+    <div class="hero-content">
+      <h2 class="text-4xl font-bold mb-2">Halo, Saya M. Riski P.</h2>
+      <p class="text-lg">Seorang Web Developer & Desainer UI/UX (Pengennya)</p>
+    </div>
+  </main>
+  
+  <footer class="bg-gray-800 text-white text-center py-6 mt-auto w-full">
+    <p class="mb-3">&copy; 2025 M. Riski P. All rights reserved.</p>
+    <div class="flex justify-center space-x-6 text-xl">
+      <a href="https://instagram.com/username" target="_blank" class="hover:text-pink-400">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/username" target="_blank" class="hover:text-gray-400">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/username" target="_blank" class="hover:text-blue-400">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </footer>  
+</body>
+</html>

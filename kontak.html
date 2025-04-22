@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - Portofolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('1143187.jpg'); /* Ganti dengan nama file gambarmu */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    /* Overlay gelap untuk membuat gambar tidak terlalu mencolok */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4); /* warna gelap dengan sedikit transparansi */
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="text-gray-800 flex flex-col min-h-screen m-0">
+  
+  <!-- Overlay Transparan Gelap -->
+  <div class="overlay"></div>
+
+  <header class="bg-gray-300 shadow-md sticky top-0 z-50 w-full">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Portofolio</h1>
+      <nav class="space-x-4 hidden md:block">
+        <a href="index.html" class="hover:text-blue-500">Beranda</a>
+        <a href="tentang.html" class="hover:text-blue-500">Tentang</a>
+        <a href="projek.html" class="hover:text-blue-500">Projek</a>
+        <a href="keahlian.html" class="hover:text-blue-500">Keahlian</a>
+        <a href="kontak.html" class="text-blue-500">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow py-20 px-4">
+    <h2 class="text-3xl font-bold mb-6 text-center text-white">Kontak</h2> <!-- Tambahkan kelas text-white disini -->
+    <form class="max-w-xl mx-auto bg-white bg-opacity-90 p-6 rounded-lg shadow-lg">
+      <div class="mb-4">
+        <label class="block text-sm font-semibold mb-2">Nama</label>
+        <input type="text" class="w-full p-2 border rounded" placeholder="Nama kamu...">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-semibold mb-2">Email</label>
+        <input type="email" class="w-full p-2 border rounded" placeholder="Email kamu...">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-semibold mb-2">Pesan</label>
+        <textarea class="w-full p-2 border rounded" placeholder="Pesan..." rows="4"></textarea>
+      </div>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Kirim</button>
+    </form>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center py-6 mt-auto w-full">
+    <p class="mb-3">&copy; 2025 M. Riski P. All rights reserved.</p>
+    <div class="flex justify-center space-x-6 text-xl">
+      <a href="https://instagram.com/username" target="_blank" class="hover:text-pink-400">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/username" target="_blank" class="hover:text-gray-400">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/username" target="_blank" class="hover:text-blue-400">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </footer>  
+</body>
+</html>

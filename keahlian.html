@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keahlian - Portofolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('19746_2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    /* Overlay agar gambar lebih lembut */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.2); /* Semitransparan hitam tipis */
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="text-gray-100 flex flex-col min-h-screen m-0">
+
+  <!-- Overlay transparan tipis -->
+  <div class="overlay"></div>
+
+  <header class="bg-gray-300 shadow-md sticky top-0 z-50 w-full text-gray-900">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Portofolio</h1>
+      <nav class="space-x-4 hidden md:block">
+        <a href="index.html" class="hover:text-blue-500">Beranda</a>
+        <a href="tentang.html" class="hover:text-blue-500">Tentang</a>
+        <a href="projek.html" class="hover:text-blue-500">Projek</a>
+        <a href="keahlian.html" class="text-blue-500">Keahlian</a>
+        <a href="kontak.html" class="hover:text-blue-500">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow py-20 px-4 max-w-5xl mx-auto relative z-10">
+    <h2 class="text-3xl font-bold mb-6 text-center">Keahlian</h2>
+    <ul class="list-disc list-inside text-lg bg-white bg-opacity-90 p-6 rounded-lg shadow text-gray-800">
+      <li>HTML, CSS, JavaScript</li>
+      <li>Framework: Tailwind CSS, Bootstrap</li>
+      <li>Desain UI/UX dengan Figma</li>
+      <li>Memasak</li>
+      <li>Menganalisis Data</li>
+      <li>Expert Public Speaking (Pengennya)</li>
+      <li>Mudah Bersosialisasi</li>
+      <li>Tampan dan Berani</li>
+      <li>Bertanggung Jawab</li>
+      <li>Jago Nugas Kalo Deadline</li>
+      <li>Bisa Belajar Otodidak</li>
+    </ul>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center py-6 mt-auto w-full relative z-10">
+    <p class="mb-3">&copy; 2025 M. Riski P. All rights reserved.</p>
+    <div class="flex justify-center space-x-6 text-xl">
+      <a href="https://instagram.com/username" target="_blank" class="hover:text-pink-400">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/username" target="_blank" class="hover:text-gray-400">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/username" target="_blank" class="hover:text-blue-400">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </footer>  
+</body>
+</html>
