@@ -15,7 +15,6 @@
       position: relative;
     }
 
-    /* Overlay gelap untuk membuat gambar tidak terlalu mencolok */
     .overlay {
       position: absolute;
       top: 0;
@@ -28,25 +27,40 @@
   </style>
 </head>
 <body class="text-gray-800 flex flex-col min-h-screen m-0">
-  
-  <!-- Overlay Transparan Gelap -->
+
   <div class="overlay"></div>
 
   <header class="bg-gray-300 shadow-md sticky top-0 z-50 w-full">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">Portofolio</h1>
+
+      <!-- Hamburger button -->
+      <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Desktop nav -->
       <nav class="space-x-4 hidden md:block">
         <a href="index.html" class="hover:text-blue-500">Beranda</a>
         <a href="tentang.html" class="hover:text-blue-500">Tentang</a>
         <a href="projek.html" class="hover:text-blue-500">Projek</a>
         <a href="keahlian.html" class="hover:text-blue-500">Keahlian</a>
-        <a href="kontak.html" class="text-blue-500">Kontak</a>
+        <a href="kontak.html" class="text-blue-500 font-medium">Kontak</a>
       </nav>
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-1 hover:text-blue-500">Beranda</a>
+      <a href="tentang.html" class="block py-1 hover:text-blue-500">Tentang</a>
+      <a href="projek.html" class="block py-1 hover:text-blue-500">Projek</a>
+      <a href="keahlian.html" class="block py-1 hover:text-blue-500">Keahlian</a>
+      <a href="kontak.html" class="block py-1 text-blue-500 font-medium">Kontak</a>
     </div>
   </header>
 
   <main class="flex-grow py-20 px-4">
-    <h2 class="text-3xl font-bold mb-6 text-center text-white">Kontak</h2> <!-- Tambahkan kelas text-white disini -->
+    <h2 class="text-3xl font-bold mb-6 text-center text-white">Kontak</h2>
     <form class="max-w-xl mx-auto bg-white bg-opacity-90 p-6 rounded-lg shadow-lg">
       <div class="mb-4">
         <label class="block text-sm font-semibold mb-2">Nama</label>
@@ -77,6 +91,15 @@
         <i class="fab fa-linkedin"></i>
       </a>
     </div>
-  </footer>  
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
