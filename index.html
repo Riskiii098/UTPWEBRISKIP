@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     .hero-section {
-      background-image: url('wallpapersden.com_77222-1920x1080.jpg'); /* Ganti path jika perlu */
+      background-image: url('wallpapersden.com_77222-1920x1080.jpg');
       background-size: cover;
       background-position: center;
       position: relative;
@@ -18,7 +18,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background-color: rgba(0, 0, 0, 0.5); /* Lapisan transparan */
+      background-color: rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
 
@@ -33,20 +33,36 @@
   <header class="bg-gray-300 shadow-md sticky top-0 z-50 w-full text-gray-800">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">Portofolio</h1>
+      
+      <!-- Hamburger Button -->
+      <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <!-- Desktop Menu -->
       <nav class="space-x-4 hidden md:block">
-        <a href="index.html" class="text-blue-500">Beranda</a>
+        <a href="index.html" class="text-blue-500 font-medium">Beranda</a>
         <a href="tentang.html" class="hover:text-blue-500">Tentang</a>
         <a href="projek.html" class="hover:text-blue-500">Projek</a>
         <a href="keahlian.html" class="hover:text-blue-500">Keahlian</a>
         <a href="kontak.html" class="hover:text-blue-500">Kontak</a>
       </nav>
     </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-1 text-blue-500 font-medium">Beranda</a>
+      <a href="tentang.html" class="block py-1 hover:text-blue-500">Tentang</a>
+      <a href="projek.html" class="block py-1 hover:text-blue-500">Projek</a>
+      <a href="keahlian.html" class="block py-1 hover:text-blue-500">Keahlian</a>
+      <a href="kontak.html" class="block py-1 hover:text-blue-500">Kontak</a>
+    </div>
   </header>
   
-  <main class="hero-section flex-grow flex flex-col justify-center items-center text-center px-4">
+  <main class="hero-section flex-grow min-h-[100vh] flex flex-col justify-center items-center text-center px-6 py-12">
     <div class="hero-content">
-      <h2 class="text-4xl font-bold mb-2">Halo, Saya M. Riski P.</h2>
-      <p class="text-lg">Seorang Web Developer & Desainer UI/UX (Pengennya)</p>
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">Halo, Saya M. Riski P.</h2>
+      <p class="text-base md:text-xl">Seorang Web Developer & Desainer UI/UX (Pengennya)</p>
     </div>
   </main>
   
@@ -64,5 +80,14 @@
       </a>
     </div>
   </footer>  
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
